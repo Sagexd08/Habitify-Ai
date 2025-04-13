@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb+srv://sohomchatterjee07:9434523211dola34@cluster0.ruyara3.mongodb.net/habitify?retryWrites=true&w=majority
+      - JWT_SECRET=fnh5u4oUzj50ULY2IN/tsymwaNVIHUNz8UNRjUJ64EgOBx/IZ8RUaV+tDa8U6yPEf9EpFXzDNM6etQjozWrKTQ==
+      - GEMINI_API_KEY=AIzaSyD6F_MBHqrf-TDdzzbuOt7ZYI6ROP-dL5s
+    networks:
+      - habitify-net
+
+networks:
+  habitify-net:
